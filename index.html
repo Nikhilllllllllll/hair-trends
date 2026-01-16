@@ -1325,6 +1325,72 @@
                 gap: 20px;
             }
         }
+
+        /* ======================================
+   FIXED DECOR PER SECTION (PNG BASED)
+   ZERO LAYOUT BREAK
+====================================== */
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decor wrapper */
+.section-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Shared decor image style */
+.section-decor .sd {
+    position: absolute;
+    width: 90px;
+    opacity: 0.12;
+    filter: grayscale(100%);
+}
+
+/* Corner placements (fixed) */
+.section-decor .tl {
+    top: 40px;
+    left: 40px;
+    transform: rotate(-15deg);
+}
+
+.section-decor .tr {
+    top: 40px;
+    right: 40px;
+    transform: rotate(18deg);
+}
+
+.section-decor .bl {
+    bottom: 40px;
+    left: 40px;
+    transform: rotate(10deg);
+}
+
+.section-decor .br {
+    bottom: 40px;
+    right: 40px;
+    transform: rotate(-12deg);
+}
+
+/* Ensure real content stays above */
+section > *:not(.section-decor) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+    .section-decor .sd {
+        width: 60px;
+        opacity: 0.08;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -1353,6 +1419,13 @@
     </header>
 
     <section class="hero" id="home">
+        <div class="section-decor">
+    <img src="scissor.png" class="sd tl">
+    <img src="style.png" class="sd tr">
+    <img src="mirror.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
+
         <span class="pill-label fade-in">Premium Unisex Salon</span>
         <h1>PREMIUM HAIR & BRIDAL ARTISTRY.</h1>
         <p>Experience premium grooming designed for your unique style. We offer expert hair patch solutions and beautiful bridal makeovers with a focus on quality and care. Our team is dedicated to giving you a modern, comfortable, and professional salon experience. Visit us for high-quality services that make you look and feel your best.</p>
@@ -1373,12 +1446,18 @@
             </div>
             <div class="info-item">
                 <i data-lucide="map-pin"></i>
-                <span>Ganpati Enclave, Near HDFC, Station Road, Jamtara-815352, Jharkhand</span>
+                <span>Ganpati Enclave, Near HDFC, Station Road, Jamtara-815351, Jharkhand</span>
             </div>
         </div>
     </section>
 
     <section class="about" id="about">
+        <div class="section-decor">
+    <img src="mirror.png" class="sd tl">
+    <img src="style.png" class="sd tr">
+    <img src="scissor2.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">About Hair Trends Salon</h2>
             <div class="gold-underline"></div>
@@ -1414,6 +1493,12 @@
     </section>
 
     <section class="services" id="services">
+        <div class="section-decor">
+    <img src="scissor.png" class="sd tl">
+    <img src="eyebrow.png" class="sd tr">
+    <img src="mirror2.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">Our Premium Services</h2>
             <div class="gold-underline"></div>
@@ -1473,6 +1558,12 @@
 
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
+        <div class="section-decor">
+    <img src="scissor2.png" class="sd tl">
+    <img src="eyebrow.png" class="sd tr">
+    <img src="style.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">Service Pricing</h2>
             <div class="gold-underline"></div>
@@ -1603,6 +1694,12 @@
     </section>
 
     <section class="why-us" id="why">
+        <div class="section-decor">
+    <img src="scissor2.png" class="sd tl">
+    <img src="style.png" class="sd tr">
+    <img src="mirror2.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">Why Choose Us</h2>
             <div class="gold-underline"></div>
@@ -1633,6 +1730,12 @@
     </section>
 
     <section id="gallery">
+        <div class="section-decor">
+    <img src="style.png" class="sd tl">
+    <img src="scissor.png" class="sd tr">
+    <img src="spray.png" class="sd bl">
+    <img src="mirror.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">Our Transformations</h2>
             <div class="gold-underline"></div>
@@ -1717,6 +1820,12 @@
     </div>
 
     <section class="testimonials" id="testimonials">
+        <div class="section-decor">
+    <img src="scissor.png" class="sd tl">
+    <img src="eyebrow.png" class="sd tr">
+    <img src="mirror.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">Client Experiences in Hairtrends</h2>
             <div class="gold-underline"></div>
@@ -1795,6 +1904,12 @@
     </section>
 
     <section id="contact">
+        <div class="section-decor">
+    <img src="scissor.png" class="sd tl">
+    <img src="style.png" class="sd tr">
+    <img src="mirror.png" class="sd bl">
+    <img src="spray.png" class="sd br">
+</div>
         <div class="container">
             <h2 class="section-title">Visit Our Salon</h2>
             <div class="gold-underline"></div>
@@ -1802,7 +1917,7 @@
             <div class="contact-cards">
                 <div class="c-card fade-in">
                     <i data-lucide="map-pin" size="32"></i>
-                    <h4>Ganpati Enclave, Near HDFC, Station Road, Jamtara-815352, Jharkhand</h4>
+                    <h4>Ganpati Enclave, Near HDFC, Station Road, Jamtara-815351, Jharkhand</h4>
                     <p style="font-size: 0.95rem; color: var(--text-muted);">Specializing In: Advanced Hair Patches • Signature Bridal Makeup • Premium Grooming</p>
                 </div>
                 <div class="c-card fade-in">
